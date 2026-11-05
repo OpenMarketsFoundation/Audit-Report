@@ -1,0 +1,47 @@
+{
+  "profile_id": "listing-reader-v1",
+  "profile_version": "1.0.0",
+  "title": "Listing reader: six complete capabilities",
+  "comparison_mode": "behavior_only",
+  "standard_ids": [],
+  "description": "Declare this exact profile before an audit. All six criteria remain in the denominator. This measures the stated listing-reader behaviors, not compliance with every part of a NIP, production adoption, financial safety, or overall marketplace quality.",
+  "applicability": "A client component that discovers and displays marketplace listings. State its declared listing variant and app configuration in the report. Evaluate other roles under separate profiles.",
+  "scoring": {
+    "0": "Verified unavailability in the audited scope, or a recorded behavior test that genuinely fails the criterion. Missing searches and environment failures do not qualify.",
+    "1": "Complete, reachable implemented source trace for this criterion, with no contradictory evidence; behavior execution is not run or blocked.",
+    "2": "Complete, reachable implementation plus a recorded passing behavior test for this criterion.",
+    "null": "Unknown, unexamined, documentation-only, partial, conflicting, or blocked without a complete implementation trace."
+  },
+  "criteria": [
+    {
+      "id": "discover",
+      "capability_id": "listing.discover",
+      "description": "Discover candidate listings from the declared source and route them into a reachable listing-reader workflow; record relay, query, index, and filtering assumptions."
+    },
+    {
+      "id": "render",
+      "capability_id": "listing.render",
+      "description": "Parse and render the declared minimum listing contract in a reachable consumer, without substituting a fixture-only parser for the application path. State the required fields and malformed-input behavior."
+    },
+    {
+      "id": "price",
+      "capability_id": "listing.price",
+      "description": "Interpret amount, denomination/currency, and optional frequency according to the declared listing variant, including missing or invalid price handling. A formatted number alone is insufficient."
+    },
+    {
+      "id": "address",
+      "capability_id": "listing.address",
+      "description": "Resolve listing identity using the full address required by the declared variant; for addressable Nostr events this includes kind, author, and d identifier. Do not confuse the current event ID with a stable listing address."
+    },
+    {
+      "id": "update",
+      "capability_id": "listing.update",
+      "description": "Apply valid listing revisions and resolve competing versions according to the declared contract, while preserving listing identity and preventing an older event from overwriting a newer accepted version."
+    },
+    {
+      "id": "withdrawal",
+      "capability_id": "listing.withdrawal",
+      "description": "Honor the declared listing-withdrawal variant in discovery and display. The variant may use a sold/inactive status, a valid deletion request, or another explicit convention. Name and assess that complete variant; this profile mandates no particular commerce protocol and does not imply remote erasure."
+    }
+  ]
+}

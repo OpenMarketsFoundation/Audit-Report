@@ -1,0 +1,438 @@
+{
+  "schema_version": "1.0.0",
+  "process_version": "1.0.0",
+  "prompt_version": "1.0.0",
+  "record_type": "example",
+  "report_id": "example-listing-reader-20261105",
+  "previous_report_id": null,
+  "audited_at": "2026-11-05T10:00:00Z",
+  "cohort": {
+    "id": "example-cohort-only",
+    "comparison_cutoff": "2026-11-05T12:00:00Z",
+    "observation_window": "Synthetic interval 2026-11-01T00:00:00Z/2026-11-05T12:00:00Z; no observations occurred.",
+    "source_scope_policy": "Fictional single reader component; no deployment equivalence.",
+    "baseline_ids": [
+      "EXAMPLE-LISTING"
+    ],
+    "baseline_digest": null
+  },
+  "target": {
+    "name": "Fictional Example Reader",
+    "repository": "https://example.invalid/fictional/reader",
+    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "ref": "fictional-main",
+    "components": [
+      "apps/reader"
+    ],
+    "roles": [
+      "listing_reader"
+    ]
+  },
+  "scope": {
+    "included": [
+      "Synthetic data illustrating the JSON contract and score interval."
+    ],
+    "excluded": [
+      "All real repositories, deployments, users, adoption denominators, and published rankings."
+    ],
+    "limitations": [
+      "Every URL, source locator, commit ID, evidence record, and behavior outcome is fabricated for this example.",
+      "This is not an audit. No protocol conformance or runtime functionality is asserted."
+    ]
+  },
+  "standards": [
+    {
+      "id": "EXAMPLE-LISTING",
+      "url": "https://example.invalid/spec/listing",
+      "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "status": "fictional example; not a NIP or community standard"
+    }
+  ],
+  "deployments": [
+    {
+      "url": "https://example.invalid/reader",
+      "environment": "fictional",
+      "provenance": "unverified",
+      "observed_at": null,
+      "deployed_commit": null,
+      "evidence_ids": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-DISCOVER",
+      "type": "source",
+      "location": "https://example.invalid/fictional/reader/blob/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/src/discover.ts",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "locator": "openCatalog -> query -> listingStore",
+      "observed_at": null,
+      "summary": "SIMULATED: A complete reachable discovery trace is assumed only to illustrate a source-backed score.",
+      "limitations": [
+        "Fictional record for validator demonstration; no repository inspection or behavior run occurred."
+      ]
+    },
+    {
+      "id": "E-RENDER",
+      "type": "source",
+      "location": "https://example.invalid/fictional/reader/blob/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/src/render.ts",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "locator": "listingRoute -> parseListing -> listingCard",
+      "observed_at": null,
+      "summary": "SIMULATED: A complete render path is assumed for this fictional example.",
+      "limitations": [
+        "Fictional record for validator demonstration; no repository inspection or behavior run occurred."
+      ]
+    },
+    {
+      "id": "E-RENDER-RUN",
+      "type": "test_run",
+      "location": "https://example.invalid/fictional/runs/render.json",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "locator": "fixture render-minimal; simulated exit 0",
+      "observed_at": null,
+      "summary": "SIMULATED: A passing render behavior run is represented; there is no actual run or downloadable test log.",
+      "limitations": [
+        "Fictional record for validator demonstration; no repository inspection or behavior run occurred."
+      ]
+    },
+    {
+      "id": "E-PRICE",
+      "type": "source",
+      "location": "https://example.invalid/fictional/reader/blob/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/src/price.ts",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "locator": "renderPrice -> explicit unsupported result",
+      "observed_at": null,
+      "summary": "SIMULATED: An explicit unsupported price path is assumed; this is not a missing-search result.",
+      "limitations": [
+        "Fictional record for validator demonstration; no repository inspection or behavior run occurred."
+      ]
+    },
+    {
+      "id": "E-ADDRESS-DOC",
+      "type": "documentation",
+      "location": "https://example.invalid/fictional/reader/docs/roadmap",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "locator": "listing identity section",
+      "observed_at": null,
+      "summary": "SIMULATED: A roadmap claims address support, without implementation evidence.",
+      "limitations": [
+        "Fictional record for validator demonstration; no repository inspection or behavior run occurred."
+      ]
+    },
+    {
+      "id": "E-UPDATE",
+      "type": "source",
+      "location": "https://example.invalid/fictional/reader/blob/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/src/revisions.ts",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "locator": "subscription -> compare revision -> replace current listing",
+      "observed_at": null,
+      "summary": "SIMULATED: A complete revision path is assumed, but execution is blocked by a missing isolated test harness.",
+      "limitations": [
+        "Fictional record for validator demonstration; no repository inspection or behavior run occurred."
+      ]
+    },
+    {
+      "id": "E-WITHDRAWAL-SEARCH",
+      "type": "negative_search",
+      "location": "https://example.invalid/fictional/review/search-log",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "locator": "src/reader: withdrawal and deletion searches",
+      "observed_at": null,
+      "summary": "SIMULATED: A bounded search is inconclusive. No absence or failed behavior is inferred.",
+      "limitations": [
+        "Fictional record for validator demonstration; no repository inspection or behavior run occurred."
+      ]
+    },
+    {
+      "id": "E-DEPENDENCY",
+      "type": "dependency",
+      "location": "https://example.invalid/fictional/reader/blob/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/package-lock.json",
+      "revision": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "locator": "example-sdk locked entry",
+      "observed_at": null,
+      "summary": "SIMULATED: A fictional dependency entry is present; wiring is not asserted.",
+      "limitations": [
+        "Fictional record for validator demonstration; no repository inspection or behavior run occurred."
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C-DISCOVER",
+      "capability_id": "listing.discover",
+      "statement": "SIMULATED: Complete reachable discovery implementation, behavior not run.",
+      "statement_type": "observed",
+      "implementation": "implemented",
+      "execution": "not_run",
+      "availability": "default",
+      "evidence_ids": [
+        "E-DISCOVER"
+      ],
+      "limitations": [
+        "Illustration only; excluded from all real adoption and ranking datasets."
+      ]
+    },
+    {
+      "id": "C-RENDER",
+      "capability_id": "listing.render",
+      "statement": "SIMULATED: Complete reachable renderer plus a represented passing behavior run.",
+      "statement_type": "observed",
+      "implementation": "implemented",
+      "execution": "passed",
+      "availability": "default",
+      "evidence_ids": [
+        "E-RENDER",
+        "E-RENDER-RUN"
+      ],
+      "limitations": [
+        "Illustration only; excluded from all real adoption and ranking datasets."
+      ]
+    },
+    {
+      "id": "C-PRICE",
+      "capability_id": "listing.price",
+      "statement": "SIMULATED: Explicit source evidence of unimplemented price interpretation.",
+      "statement_type": "observed",
+      "implementation": "not_implemented",
+      "execution": "not_run",
+      "availability": "default",
+      "evidence_ids": [
+        "E-PRICE"
+      ],
+      "limitations": [
+        "Illustration only; excluded from all real adoption and ranking datasets."
+      ]
+    },
+    {
+      "id": "C-ADDRESS",
+      "capability_id": "listing.address",
+      "statement": "SIMULATED: Only a roadmap declaration was found.",
+      "statement_type": "observed",
+      "implementation": "declared_only",
+      "execution": "not_run",
+      "availability": "unknown",
+      "evidence_ids": [
+        "E-ADDRESS-DOC"
+      ],
+      "limitations": [
+        "Illustration only; excluded from all real adoption and ranking datasets."
+      ]
+    },
+    {
+      "id": "C-UPDATE",
+      "capability_id": "listing.update",
+      "statement": "SIMULATED: Complete source trace, with execution blocked by environment.",
+      "statement_type": "observed",
+      "implementation": "implemented",
+      "execution": "blocked",
+      "availability": "default",
+      "evidence_ids": [
+        "E-UPDATE"
+      ],
+      "limitations": [
+        "Illustration only; excluded from all real adoption and ranking datasets."
+      ]
+    },
+    {
+      "id": "C-WITHDRAWAL",
+      "capability_id": "listing.withdrawal",
+      "statement": "SIMULATED: A bounded search was inconclusive; support remains unknown.",
+      "statement_type": "observed",
+      "implementation": "not_found_in_scope",
+      "execution": "not_run",
+      "availability": "unknown",
+      "evidence_ids": [
+        "E-WITHDRAWAL-SEARCH"
+      ],
+      "limitations": [
+        "Illustration only; excluded from all real adoption and ranking datasets."
+      ]
+    }
+  ],
+  "event_kinds": [
+    {
+      "id": "K-EXAMPLE-LISTING",
+      "kind": 30402,
+      "purpose": "Synthetic listing inventory example, not a NIP-99 conformance claim.",
+      "layer": "relay_event",
+      "variant": "fictional-minimal-listing-v1",
+      "standard_ids": [
+        "EXAMPLE-LISTING"
+      ],
+      "operations": [
+        {
+          "operation": "read",
+          "status": "partial",
+          "claim_ids": [
+            "C-DISCOVER",
+            "C-RENDER",
+            "C-PRICE"
+          ]
+        }
+      ],
+      "contract": {
+        "transport": "normal relay EVENT (simulated)",
+        "identity": "kind + author + d; identity resolution remains unverified in this fictional reader",
+        "content": "human-readable text in this fictional variant",
+        "tags": [
+          "d",
+          "title",
+          "price"
+        ],
+        "unknowns": [
+          "Exact parsing of money and address semantics."
+        ],
+        "privacy": "Public listing data; no real data or signed events are included."
+      },
+      "evidence_ids": [
+        "E-DISCOVER",
+        "E-RENDER",
+        "E-PRICE"
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "category": "nostr_library",
+      "name": "fictional-example-sdk",
+      "declared_version": "^1.2.0",
+      "resolved_version": "1.2.3",
+      "status": "dependency_present",
+      "evidence_ids": [
+        "E-DEPENDENCY"
+      ],
+      "notes": "SIMULATED manifest/lockfile evidence; no wiring, runtime, or deployment proof."
+    }
+  ],
+  "builds": [
+    {
+      "component": "apps/reader",
+      "runtime": "unexamined synthetic runtime",
+      "command": null,
+      "status": "not_attempted",
+      "evidence_ids": [],
+      "limitations": [
+        "No code was installed or executed for this illustrative record."
+      ]
+    }
+  ],
+  "interoperability": [
+    {
+      "producer": {
+        "name": "Fictional Merchant",
+        "repository": "https://example.invalid/fictional/merchant",
+        "commit": null,
+        "role": "listing_publisher"
+      },
+      "consumer": {
+        "name": "Fictional Example Reader",
+        "repository": "https://example.invalid/fictional/reader",
+        "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "role": "listing_reader"
+      },
+      "capability_id": "listing.render",
+      "variant": "fictional-minimal-listing-v1",
+      "direction": "merchant publishes; reader consumes",
+      "status": "not_assessed",
+      "evidence_ids": [],
+      "limitations": [
+        "A one-client render fixture does not establish producer-to-consumer interoperability."
+      ]
+    }
+  ],
+  "lineage": [
+    {
+      "capability_ids": [
+        "listing.discover",
+        "listing.render",
+        "listing.price",
+        "listing.address",
+        "listing.update",
+        "listing.withdrawal"
+      ],
+      "family_id": "fictional-family-unresolved",
+      "independence": "unknown",
+      "evidence_ids": []
+    }
+  ],
+  "candidates": [
+    {
+      "id": "EXAMPLE-CANDIDATE",
+      "problem": "SIMULATED: the fictional reader has no verified money interpretation.",
+      "proposal": "Illustrate how a report would request exact field and denomination evidence before proposing a shared rule.",
+      "status": "needs_evidence",
+      "evidence_ids": [
+        "E-PRICE"
+      ],
+      "conflicts": [
+        "No real implementations were examined, so this cannot support a community rule."
+      ],
+      "next_evidence": [
+        "Exclude this example and collect actual independently reviewed implementation evidence."
+      ]
+    }
+  ],
+  "ranking": {
+    "profile_id": "listing-reader-v1",
+    "profile_sha256": "da1d2788277dcbedc1abba43474a350f53afa3f34890873efaa7e356d602dbe6",
+    "criteria": [
+      {
+        "id": "discover",
+        "points": 1,
+        "claim_ids": [
+          "C-DISCOVER"
+        ],
+        "reason": "SIMULATED complete source trace; no behavior execution."
+      },
+      {
+        "id": "render",
+        "points": 2,
+        "claim_ids": [
+          "C-RENDER"
+        ],
+        "reason": "SIMULATED complete source trace plus a represented passed behavior run."
+      },
+      {
+        "id": "price",
+        "points": 0,
+        "claim_ids": [
+          "C-PRICE"
+        ],
+        "reason": "SIMULATED explicit non-implementation, not a search miss or environment block."
+      },
+      {
+        "id": "address",
+        "points": null,
+        "claim_ids": [
+          "C-ADDRESS"
+        ],
+        "reason": "Documentation alone cannot establish behavior or implementation."
+      },
+      {
+        "id": "update",
+        "points": 1,
+        "claim_ids": [
+          "C-UPDATE"
+        ],
+        "reason": "SIMULATED complete source trace; blocked execution does not erase that trace."
+      },
+      {
+        "id": "withdrawal",
+        "points": null,
+        "claim_ids": [
+          "C-WITHDRAWAL"
+        ],
+        "reason": "Inconclusive bounded search remains unknown; it is not zero."
+      }
+    ],
+    "summary": {
+      "lower": 4,
+      "upper": 8,
+      "max": 12,
+      "known": 4,
+      "total": 6,
+      "coverage_percent": 66.67,
+      "eligible": false
+    }
+  }
+}
